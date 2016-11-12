@@ -1,0 +1,16 @@
+body {
+  position: relative;
+}
+
+.sidebar-module-inset {
+	position: fixed;
+}
+
+.doc-header {
+	padding:20px 0;
+}
+
+.doc-header .container {
+	border-bottom:1px solid #eee;
+	padding-bottom:20px;
+}

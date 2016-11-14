@@ -4,18 +4,32 @@ body {
 
 .sidebar-module-inset {
 	position: fixed;
+	top:20px;
 }
 
 .doc-header {
 	padding:20px 0;
+	border-bottom:1px solid #eee;
 }
 
-.doc-header .container {
-	border-bottom:1px solid #eee;
-	padding-bottom:20px;
+.doc-main{
+	background-color:#fff;
+	border-right:10px solid rgba(0,0,0,.1);
 }
+
 article {
 	border-bottom:1px solid #eee;
 	margin-bottom:20px;
 	padding-bottom:20px;
+	padding-right:20px;
+}
+
+.bck{background-color: #eee;
+width: 50%;
+height: 100%;
+display: block;
+float: right;
+position: absolute;
+right: 0px;
+overflow: hidden;
 }

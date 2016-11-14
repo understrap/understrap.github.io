@@ -14,3 +14,8 @@ body {
 	border-bottom:1px solid #eee;
 	padding-bottom:20px;
 }
+article {
+	border-bottom:1px solid #eee;
+	margin-bottom:20px;
+	padding-bottom:20px;
+}

@@ -4,11 +4,13 @@ body {
 
 .sidebar-module-inset {
 	position: fixed;
-	top:20px;
+	margin:20px;
+	margin-left:0px;
 }
 
 .doc-header {
 	padding:20px 0;
+	margin:20px 0;
 	border-bottom:1px solid #eee;
 }
 

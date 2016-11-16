@@ -17,6 +17,7 @@ body {
 .doc-main{
 	background-color:#fff;
 	border-right:1px solid rgba(0,0,0,.2);
+
 }
 
 h1.doc-title {
@@ -34,7 +35,7 @@ h1.doc-title small {
 article {
 	border-bottom:1px solid #eee;
 	margin:20px 0;
-	padding:20px 40px 20px 0;
+	padding:20px 0px 20px 0;
 }
 
 article p {margin-bottom:20px;}
@@ -45,7 +46,7 @@ article img {
 }
 
 .bck{
-background-color: #212121;
+background-color: #23282d;
 width: 50%;
 height: 100%;
 display: block;

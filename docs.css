@@ -1,5 +1,6 @@
 body {
   position: relative;
+  font-family: Helvetica Neue, Helvetica, Arial, serif;
 }
 
 .sidebar-module-inset {
@@ -16,17 +17,35 @@ body {
 
 .doc-main{
 	background-color:#fff;
-	border-right:10px solid rgba(0,0,0,.1);
+	border-right:1px solid rgba(0,0,0,.2);
+}
+
+h1.doc-title {
+	font-weight:300;
+	font-size:5rem;
+	line-height:3rem;
+}
+
+h1.doc-title small {
+	font-size:2rem;
+	color:#ccc;
 }
 
 article {
 	border-bottom:1px solid #eee;
-	margin-bottom:20px;
-	padding-bottom:20px;
-	padding-right:20px;
+	margin:20px 0;
+	padding:20px 20px 20px 0;
 }
 
-.bck{background-color: #eee;
+article p {margin-bottom:20px;}
+article img {
+	margin:20px 0;
+	padding:10px;
+	border:1px solid #eee;
+}
+
+.bck{
+background-color: #212121;
 width: 50%;
 height: 100%;
 display: block;
@@ -34,4 +53,11 @@ float: right;
 position: absolute;
 right: 0px;
 overflow: hidden;
+}
+
+.sidebar-module{
+	color:#fff;
+}
+.sidebar-module h4 {
+	color:#fff;
 }

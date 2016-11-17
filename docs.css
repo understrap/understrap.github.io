@@ -39,7 +39,7 @@ article {
 }
 
 article p {margin-bottom:20px;}
-article img {
+article img.screen {
 	margin:20px 0;
 	padding:10px;
 	border:1px solid #eee;
@@ -61,4 +61,11 @@ overflow: hidden;
 }
 .sidebar-module h4 {
 	color:#fff;
+}
+
+pre {
+	color: #fff;
+background-color: #23282d;
+padding: 10px;
+border-radius: 3px;
 }

@@ -30,7 +30,7 @@
 
         <div class="doc-header">
             <h1 class="doc-title">UnderStrap <small>Documentation</small></h1>
-            Website: <a href="https://understrap.com">https://understrap.com</a> | Theme Demo: <a href="https://understrap.com">https://understrap.com/understrap</a>
+            Website: <a href="https://understrap.com">https://understrap.com</a> | Theme Demo: <a href="https://understrap.com">https://understrap.com/understrap</a> | <a href="https://twitter.com/_understrap" target="_blank"><img src="https://img.shields.io/twitter/follow/_understrap.svg?style=social&label=Follow" /></a>
         </div>
 
         <hr/>
@@ -50,34 +50,111 @@
             </p>
           </article>
 
+          <article id="changelog">
+            <h2>Changelog & Release Infos</h2>
+
+            <p>
+            Stable release: <img src="https://img.shields.io/github/release/holger1411/understrap.svg" /><br/>
+            See <a href="https://github.com/holger1411/understrap/blob/master/CHANGELOG.md" target="_blank">Changelog</a>
+            </p>
+          </article>
+
+
+
           <article id="installation">
             <h2>Installation</h2>
             <p class="lead">
-              There are three (common) way to install UnderStrap: Via WordPress theme installer, via Node package manager (npm) or manually via ZIP upload.
+              There are two (common) ways to install UnderStrap: Via WordPress theme installer or manually via ZIP upload.
             </p>
 
-              <h4>Installation via WordPress theme installer</h4>
+              <h4>1.Installation via WordPress theme installer</h4>
             <p >
               UnderStrap is available via <a href="https://wordpress.org/themes/understrap/" target="_blank">wordpress.org</a>. Means you can install it from your WordPress backend as any other theme, too.
-              <img class="img-fluid" src="img/understrap_installer.jpg" alt="screenshot from WordPress theme installer after searching for UnderStrap" />
+              <img class="img-fluid screen" src="img/understrap_installer.jpg" alt="screenshot from WordPress theme installer after searching for UnderStrap" />
               Click on <code>Appearance -> Themes</code> in your WordPress backend, hit the "Add New" button and search for "UnderStrap". Hit the "install" button and wait a moment. UnderStrap will be installed on your server.
               Now activate UnderStrap. Go again to <code>Appearance -> Themes</code> and hit the "Activate" button below the UnderStrap screenshot.
             </p>
+
+            <h4>2.Installation via Upload</h4>
+            <p >
+              UnderStrap is available as .zip archive at <a href="https://understrap.com/" target="_blank">UnderStrap.com</a>. Download it and store it on your local HDD.<br/>
+              Open your WordPress backend and click on <code>Appearance -> Themes</code>, hit the "Add New" button followed by the "Upload Theme" button.<br /> Select the previously stored .zip file from your HDD and upload it. The WordPres install routine will run automatically right after it.
+            </p>
+
+            <h4>3.Manually via SFTP</h4>
+            <p >
+              Follow step 2 but extract the freshly downloaded understrap.zip file on your local HDD. Now connect via SFTP to your server, browse to the <code>/wp-content/themes</code> directory of your WordPress installation and upload the <code>/understrap</code> folder to it.
+            </p>
+
           </article>
 
           <article id="developing">
             <h2>Developing with npm & Gulp</h2>
             <p class="lead">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+              UnderStrap uses npm as manager for dependency packages like Bootstrap and Underscores. And it uses Gulp as taskrunner, for example to compile .scss code into .css, minify .js code etc. The following chapter describes the usage and workflow. 
             </p>
 
             <p >
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+              <h3>Installing dependencies</h3>
+              <ul>
+                <li>Make sure you have installed Node.js and Browser-Sync* (* optional, if you wanna use it) on your computer globally</li>
+                <li>Then open your terminal and browse to the location of your UnderStrap copy</li>
+                <li>Run: <code>$ npm install</code> and then: <code>$ gulp copy-assets</code></li>
+                </ul>
+
+                <h3>Running</h3>
+
+                <p>To work and compile your Sass files on the fly start:</p>
+
+                <ul>
+                <li><code>$ gulp watch</code></li>
+                </ul>
+
+                <p>Or, to run with Browser-Sync:</p>
+
+                <ul>
+                <li>First change the browser-sync options to reflect your environment in the file <code>/gulpfile.js</code> in the beginning of the file:</li>
+                </ul>
+
+                <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> browserSyncOptions <span class="pl-k">=</span> {
+                    proxy<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>localhost/theme_test/<span class="pl-pds">"</span></span>, <span class="pl-c">// &lt;----- CHANGE HERE</span>
+                    notify<span class="pl-k">:</span> <span class="pl-c1">false</span>
+                };</pre></div>
+
+                <ul>
+                <li>then run: <code>$ gulp watch-bs</code></li>
+              </ul>
             </p>
           </article>
+
+          <article id="license">
+            <h2>License</h2>
+            <p >
+              UnderStrap is released under the terms of the GPL version 2 or (at your option) any later version.
+              <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" target="_blank">http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</a>
+            </p>
+          </article>
+
+          <article id="credits">
+            <h2>Credits</h2>
+            <p>
+              <ul>
+                <li>Font Awesome: <a href="http://fontawesome.io/license">http://fontawesome.io/license</a> (Font: SIL OFL 1.1, CSS: MIT License)</li>
+                <li>Bootstrap: <a href="http://getbootstrap.com">http://getbootstrap.com</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">https://github.com/twbs/bootstrap/blob/master/LICENSE</a> (Code licensed under MIT documentation under CC BY 3.0.)</li>
+                <li>Owl Carousel 2: <a href="http://www.owlcarousel.owlgraphic.com/">http://www.owlcarousel.owlgraphic.com/</a> | <a href="https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE">https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE</a> (Code licensed under MIT)
+                and of course</li>
+                <li>jQuery: <a href="https://jquery.org">https://jquery.org</a> | (Code licensed under MIT)</li>
+                <li>WP Bootstrap Navwalker by Edward McIntyre: <a href="https://github.com/twittem/wp-bootstrap-navwalker">https://github.com/twittem/wp-bootstrap-navwalker</a> | GNU GPL</li>
+                <li>Bootstrap Gallery Script based on Roots Sage Gallery: <a href="https://github.com/roots/sage/blob/5b9786b8ceecfe717db55666efe5bcf0c9e1801c/lib/gallery.php">https://github.com/roots/sage/blob/5b9786b8ceecfe717db55666efe5bcf0c9e1801c/lib/gallery.php</a></li>
+              </ul>
+            </p>
+          </article>
+
+
           
 
-        </div><!-- /.cod-main -->
+        </div><!-- /.doc-main -->
 
         <div class="col-sm-3 col-xs-4 doc-sidebar">
           <div class="sidebar-module sidebar-module-inset">
@@ -88,10 +165,19 @@
                 <a class="nav-link active" href="#about">About UnderStrap</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#changelog">Changelog</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#installation">Installation</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#developing">Developing with npm & Gulp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#license">License</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#credits">Credits</a>
               </li>
             </ul>
           </div>

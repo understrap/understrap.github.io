@@ -16,6 +16,9 @@
 
     <!-- Custom styles for this template -->
     <link href="docs.css" rel="stylesheet">
+
+    <!-- highlight styles -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.8.0/styles/default.min.css">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -101,7 +104,7 @@
           <article id="developing">
             <h2>Developing with npm & Gulp</h2>
             <p class="lead">
-              UnderStrap uses npm as manager for dependency packages like Bootstrap and Underscores. And it uses Gulp as taskrunner, for example to compile .scss code into .css, minify .js code etc. The following chapter describes the usage and workflow. 
+              UnderStrap uses npm as manager for dependency packages like Bootstrap and Underscores. And it uses Gulp as taskrunner, for example to compile .scss code into .css, minify .js code etc. The following chapter describes the usage and workflow.
             </p>
 
             <p >
@@ -127,16 +130,83 @@
                 <li>First change the browser-sync options to reflect your environment in the file <code>/gulpfile.js</code> in the beginning of the file:</li>
                 </ul>
 
-                <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> browserSyncOptions <span class="pl-k">=</span> {
-                    proxy<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>localhost/theme_test/<span class="pl-pds">"</span></span>, <span class="pl-c">// &lt;----- CHANGE HERE</span>
-                    notify<span class="pl-k">:</span> <span class="pl-c1">false</span>
-                };</pre></div>
+                <pre><code class="js">var browserSyncOptions = {
+                    proxy: "localhost/theme_test/", // <----- CHANGE HERE
+                    notify: false
+                };</code></pre>
 
                 <ul>
                 <li> Replace <code>localhost/theme_test/</code> with the URL to your local WordPress test environment.<br/>  For example if you run MAMP and your WordPress installation is placed in a htdocs subfolder called <code>/understrap</code> you have to add <code>localhost:8888/understrap</code>. Its the same URL you have to type in to see your local WordPress installation.</li>
                 <li>then run: <code>$ gulp watch-bs</code></li>
               </ul>
             </p>
+
+            <h3 id="gulp-npm-scss-example">A more detailed example of working with SCSS - Npm - Gulp </h3>
+
+            <p>
+              This little how to is for Linux - OS X users how currently know how to clone the project from Github. If not check <a href="http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank"> this tutorial here</a>. <strong>Assumptions:</strong> you have cloned project's source and you want to start styling various parts of the theme. Additionally you have Node.js installed on your system, if not <a href="https://nodejs.org/en/download/package-manager/" target="_blank">check here how to do it</a>.
+            </p>
+
+            <ol>
+              <li>Go to project's root directory</li>
+              <li>Install project's toolchain and dependencies by typing <kbd>npm install</kbd>. When this command completes, you should be able to see a new directory named <code>node_modules</code> under project's root directory (<code>understrap/node_modules</code>)</li>
+              <li>Move various needed libraries from <code>node_modules</code> where installed with <code>npm install</code> to project's root directory by typing <kbd>gulp copy-assets</kbd>. When this command complete, you should be able to see a new directory named <code>src</code> under project's root directory (<code>understrap/src</code>).</li>
+            </ol>
+
+            <p>We the above prerequisites complete, you are now ready to start developing - styling your copy of Understrap. For this guide, we will do the following:</p>
+
+            <ul>
+              <li>create a SCSS variable</li>
+              <li>see how to nest style rules</li>
+              <li>use the variable to change navbar's link colors</li>
+              <li>see how to reference parent selector while nesting rules to handle a hover event</li>
+            </ul>
+
+            <h4>Running the watcher</h4>
+
+            <p>
+              First we must run the watcher process which is responsible to track file changes and compile these changes to the final CSS file which in turn WordPress loads. From the terminal and while in project root directory type <kbd>gulp watch</kbd>. You should see something like the following:
+            </p>
+            <pre><code class="bash">stef@dev:understrap$ gulp watch
+[13:06:47] Using gulpfile ~/projects/php/wordpress/wp-content/themes/understrap/gulpfile.js
+[13:06:47] Starting 'watch'...
+[13:06:47] Finished 'watch' after 12 ms</code></pre>
+
+            <p>leave the terminal open with the command running as is.</p>
+
+            <h4>Styling the theme</h4>
+
+            <p>With the watcher running, open the SCSS file <code>understrap/sass/theme/_theme.scss</code> and paste the following, (<strong>you should also read the code comments</strong>):</p>
+
+            <pre><code class="scss">// SCSS Syntax http://sass-lang.com/documentation/file.SASS_REFERENCE.html#css_extensions
+
+// variable declaration in SCSS we use variables to keep style clean and easy to modify
+// if we use this variable to say 50 rules and want to change the color, we would change only this variable.
+$mycolor: #67A6A6;
+
+// in SCSS we nest
+nav {
+  // in CSS this was selected by nav a
+  a {
+    color: $mycolor !important;
+    // change a on hover example
+    // in CSS this was selected by nav a:hover
+    &:hover {
+      color: $brand-primary !important;
+    }
+  }
+}</code></pre>
+
+          <p>by saving the file you should see in terminal something like the following:</p>
+          <pre><code class="bash">[13:15:22] Starting 'sass'...
+[13:15:22] Finished 'sass' after 1.36 ms
+[13:15:22] Starting 'cleancss'...
+[13:15:22] Finished 'cleancss' after 2.81 ms
+[13:15:22] Starting 'cssnano'...
+[13:15:23] Finished 'cssnano' after 737 ms</code></pre>
+
+          <p>reload the page and you should be able to see the new style applied.</p>
+
           </article>
 
           <article id="license">
@@ -163,7 +233,7 @@
           </article>
 
 
-          
+
 
         </div><!-- /.doc-main -->
 
@@ -211,6 +281,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
     <script src="bootstrap.min.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>
+      // bootstrap highlight js
+      $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
   </body>
 </html>

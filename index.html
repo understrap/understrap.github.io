@@ -80,7 +80,7 @@
               There are two (common) ways to install UnderStrap: Via WordPress theme installer or manually via ZIP upload.
             </p>
 
-              <h4>1.Installation via WordPress theme installer</h4>
+              <h4>1. Installation via WordPress theme installer</h4>
             <p >
               UnderStrap is available via <a href="https://wordpress.org/themes/understrap/" target="_blank">wordpress.org</a>. Means you can install it from your WordPress backend as any other theme, too.
               <img class="img-fluid screen" src="img/understrap_installer.jpg" alt="screenshot from WordPress theme installer after searching for UnderStrap" />
@@ -88,15 +88,25 @@
               Now activate UnderStrap. Go again to <code>Appearance -> Themes</code> and hit the "Activate" button below the UnderStrap screenshot.
             </p>
 
-            <h4>2.Installation via Upload</h4>
+            <h4>2. Installation via Upload</h4>
             <p >
               UnderStrap is available as .zip archive at <a href="https://understrap.com/" target="_blank">UnderStrap.com</a>. Download it and store it on your local HDD.<br/>
               Open your WordPress backend and click on <code>Appearance -> Themes</code>, hit the "Add New" button followed by the "Upload Theme" button.<br /> Select the previously stored .zip file from your HDD and upload it. The WordPres install routine will run automatically right after it.
             </p>
 
-            <h4>3.Manually via SFTP</h4>
+            <h4>3. Manually via SFTP</h4>
             <p >
               Follow step 2 but extract the freshly downloaded understrap.zip file on your local HDD. Now connect via SFTP to your server, browse to the <code>/wp-content/themes</code> directory of your WordPress installation and upload the <code>/understrap</code> folder to it.
+            </p>
+
+            <h4>4. Install via npm</h4>
+            <p >
+              Open your terminal and browse to the location where you want to install UnderStrap:
+              <pre>cd path/to/location/</pre>
+              If needed create the proper folder:
+              <pre>mkdir understrap </pre>
+              Now install everything you need with:
+              <pre>npm install understrap</pre>
             </p>
 
           </article>
@@ -113,7 +123,7 @@
               <ul>
                 <li>Make sure you have installed Node.js and Browser-Sync* (* optional, if you wanna use it) on your computer globally</li>
                 <li>Then open your terminal and browse to the location of your UnderStrap copy</li>
-                <li>Run: <code>$ npm install</code> and then: <code>$ gulp copy-assets</code></li>
+                <li>Run: <code>$ npm install</code></li>
                 </ul>
 
                 <h3>Running</h3>

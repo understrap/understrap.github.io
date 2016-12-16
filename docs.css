@@ -69,3 +69,15 @@ background-color: #23282d;
 padding: 10px;
 border-radius: 3px;
 }
+
+.carbon-text, .carbon-img, .carbon-poweredby, .carbon-wrap, #carbonads{
+	float:left;
+width:auto;
+	display:inline;
+	width:100%;
+}
+
+.carbon-poweredby{
+	color:#ccc;
+	font-size:.75em;
+}

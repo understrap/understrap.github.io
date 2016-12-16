@@ -81,3 +81,8 @@ width:auto;
 	color:#ccc;
 	font-size:.75em;
 }
+
+#navbarmain {
+	background-color:#23282d;
+	z-index:2;
+}

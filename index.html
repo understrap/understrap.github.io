@@ -50,23 +50,23 @@
 
         <hr/>
         <div class="alert alert-warning" role="alert">
-          <strong>Warning!</strong> This docs are under development. They are public but not ready to read yet!
+          <strong>Warning!</strong> These docs are under development. They are public but not ready to read yet!
         </div>
         <hr/>
 
           <article id="about">
             <h2>About UnderStrap</h2>
             <p class="lead">
-              UnderStrap is a WordPress theme framework. It based on Bootstrap 4 and the starter theme Underscores. All glued together by npm, Gulp and Sass.
+              UnderStrap is a WordPress theme framework. It is based on Bootstrap 4 and <a href="https://underscores.me/">the starter theme Underscores</a>. All glued together by npm, Gulp and Sass.
             </p>
 
             <p>
-              You can use it as starter theme itself and build your own design theme on top of it. Or you use it as parent theme framework and create your own child theme for UnderStrap. At the moment, UnderStrap is in a <strike>very</strike> early stage. But if you want, feel free to use it for your own WordPress theme!
+              You can use it as a starter theme itself and build your own design theme on top of it. Or you can use it as a parent theme framework and create your own child theme for UnderStrap. At the moment, UnderStrap is in a <strike>very early</strike> late beta stage. But if you want, feel free to use it for your own WordPress theme!
             </p>
           </article>
 
           <article id="changelog">
-            <h2>Changelog & Release Infos</h2>
+            <h2>Changelog & Release Info</h2>
 
             <p>
             Stable release: <img src="https://img.shields.io/github/release/holger1411/understrap.svg" /> | Dependencies: <a href="https://david-dm.org/holger1411/understrap#info=devDependencies" target="_blank"><img src="https://img.shields.io/david/holger1411/understrap.svg" /></a><br/>
@@ -79,21 +79,21 @@
           <article id="installation">
             <h2>Installation</h2>
             <p class="lead">
-              There are two (common) ways to install UnderStrap: Via WordPress theme installer or manually via ZIP upload.
+              There are two (common) ways to install UnderStrap: Via the WordPress theme installer or manually via ZIP upload.
             </p>
 
               <h4>1. Installation via WordPress theme installer</h4>
             <p >
-              UnderStrap is available via <a href="https://wordpress.org/themes/understrap/" target="_blank">wordpress.org</a>. Means you can install it from your WordPress backend as any other theme, too.
+              UnderStrap is available via <a href="https://wordpress.org/themes/understrap/" target="_blank">wordpress.org</a>. This means you can install it from your WordPress backend just as with any other theme.
               <img class="img-fluid screen" src="img/understrap_installer.jpg" alt="screenshot from WordPress theme installer after searching for UnderStrap" />
-              Click on <code>Appearance -> Themes</code> in your WordPress backend, hit the "Add New" button and search for "UnderStrap". Hit the "install" button and wait a moment. UnderStrap will be installed on your server.
+              Click on <code>Appearance -> Themes</code> in your WordPress backend, hit the "Add New" button and search for "UnderStrap". Hit the "install" button and wait a moment. UnderStrap will now be installed on your server.
               Now activate UnderStrap. Go again to <code>Appearance -> Themes</code> and hit the "Activate" button below the UnderStrap screenshot.
             </p>
 
             <h4>2. Installation via Upload</h4>
             <p >
               UnderStrap is available as .zip archive at <a href="https://understrap.com/" target="_blank">UnderStrap.com</a>. Download it and store it on your local HDD.<br/>
-              Open your WordPress backend and click on <code>Appearance -> Themes</code>, hit the "Add New" button followed by the "Upload Theme" button.<br /> Select the previously stored .zip file from your HDD and upload it. The WordPres install routine will run automatically right after it.
+              Open your WordPress backend and click on <code>Appearance -> Themes</code>, hit the "Add New" button followed by the "Upload Theme" button.<br /> Select the previously stored .zip file from your HDD and upload it. The WordPress install routine will run automatically right after it.
             </p>
 
             <h4>3. Manually via SFTP</h4>
@@ -121,8 +121,8 @@
 
             <p >
               <h3>Preparations: Install node.js and Gulp</h3>
-              <p>At first you need node.js and Gulp installed on your computer globally. If you already done this before skip this section. If not: You have to install node.js (comes along with npm) and Gulp before you can proceed.<br/>
-                To install node.js visit the node.js website for the <a href="https://nodejs.org/en/download/" target="_blank">latest installer</a> for your OS. Download and install it like any other program, too. </p>
+              <p>First you need node.js and Gulp installed on your computer globally. If you have already done this before skip this section. If not: You have to install node.js (includes npm) and Gulp before you can proceed.<br/>
+                To install node.js visit the node.js website for the <a href="https://nodejs.org/en/download/" target="_blank">latest installer</a> for your OS. Download and install it like any other program. </p>
                 <p>To install Gulp open up your terminal, enter:
                   <pre>npm install --global gulp-cli</pre>
                   and hit enter.</br>
@@ -163,28 +163,28 @@
             <h3 id="gulp-npm-scss-example">A more detailed example of working with SCSS - Npm - Gulp </h3>
 
             <p>
-              This little how to is for Linux - OS X users how currently know how to clone the project from Github. If not check <a href="http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank"> this tutorial here</a>. <strong>Assumptions:</strong> you have cloned project's source and you want to start styling various parts of the theme. Additionally you have Node.js installed on your system, if not <a href="https://nodejs.org/en/download/package-manager/" target="_blank">check here how to do it</a>.
+              This little how to is for Linux / OS X users who know how to clone the project from Github. If you don't see <a href="http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank"> this tutorial</a>. <strong>Assumptions:</strong> you have cloned understrap's source and you want to start styling various parts of the theme. Additionally you have Node.js installed on your system, if not see the install npm section above</a>.
             </p>
 
             <ol>
               <li>Go to project's root directory</li>
               <li>Install project's toolchain and dependencies by typing <kbd>npm install</kbd>. When this command completes, you should be able to see a new directory named <code>node_modules</code> under project's root directory (<code>understrap/node_modules</code>)</li>
-              <li>Move various needed libraries from <code>node_modules</code> where installed with <code>npm install</code> to project's root directory by typing <kbd>gulp copy-assets</kbd>. When this command complete, you should be able to see a new directory named <code>src</code> under project's root directory (<code>understrap/src</code>).</li>
+              <li>Move various needed libraries from <code>node_modules</code> where installed with <code>npm install</code> to project's root directory by typing <kbd>gulp copy-assets</kbd>. When this command complete, you should be able to see a new directory named <code>src</code> under the project's root directory (<code>understrap/src</code>).</li>
             </ol>
 
-            <p>We the above prerequisites complete, you are now ready to start developing - styling your copy of Understrap. For this guide, we will do the following:</p>
+            <p>With the above prerequisites complete, you are now ready to start developing - styling your copy of Understrap. For this guide, we will do the following:</p>
 
             <ul>
               <li>create a SCSS variable</li>
               <li>see how to nest style rules</li>
               <li>use the variable to change navbar's link colors</li>
-              <li>see how to reference parent selector while nesting rules to handle a hover event</li>
+              <li>see how to reference a parent selector while nesting rules to handle a hover event</li>
             </ul>
 
             <h4>Running the watcher</h4>
 
             <p>
-              First we must run the watcher process which is responsible to track file changes and compile these changes to the final CSS file which in turn WordPress loads. From the terminal and while in project root directory type <kbd>gulp watch</kbd>. You should see something like the following:
+              First we must run the watcher process which is responsible to track file changes and compile these changes to the final CSS file which is what WordPress loads. From the terminal and while in project root directory type <kbd>gulp watch</kbd>. You should see something like the following:
             </p>
             <pre><code class="bash">stef@dev:understrap$ gulp watch
 [13:06:47] Using gulpfile ~/projects/php/wordpress/wp-content/themes/understrap/gulpfile.js
@@ -200,7 +200,7 @@
             <pre><code class="scss">// SCSS Syntax http://sass-lang.com/documentation/file.SASS_REFERENCE.html#css_extensions
 
 // variable declaration in SCSS we use variables to keep style clean and easy to modify
-// if we use this variable to say 50 rules and want to change the color, we would change only this variable.
+// if we use this variable with say 50 rules and want to change the color, we would change only this variable.
 $mycolor: #67A6A6;
 
 // in SCSS we nest

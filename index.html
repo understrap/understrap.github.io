@@ -93,7 +93,7 @@
             <h4>2. Installation via Upload</h4>
             <p >
               UnderStrap is available as .zip archive at <a href="https://understrap.com/" target="_blank">UnderStrap.com</a>. Download it and store it on your local HDD.<br/>
-              Open your WordPress backend and click on <code>Appearance -> Themes</code>, hit the "Add New" button followed by the "Upload Theme" button.<br /> Select the previously stored .zip file from your HDD and upload it. The WordPres install routine will run automatically right after it.
+              Open your WordPress backend and click on <code>Appearance -> Themes</code>, hit the "Add New" button followed by the "Upload Theme" button.<br /> Select the previously stored .zip file from your HDD and upload it. The WordPress install routine will run automatically right after it.
             </p>
 
             <h4>3. Manually via SFTP</h4>
@@ -111,6 +111,19 @@
               <pre>npm install understrap</pre>
             </p>
 
+          </article>
+
+          <article id="widgets">
+            <h2>Widgets</h2>
+            <p class="lead">
+              The theme comes with five main widget areas: Two sidebar widgets, one full size "hero" widget and two dynamic widgets area above and below the main content.
+            </p>
+
+            <a href="img/widgets.png" target="_blank"><img src="img/widgets.png" alt="widgets"  class="img-fluid screen"/></a>
+            <p><b>Hero Canvas:</b> A full size widget area right below the top navigation. Its a blank canvas for your Bootstrap markup, for example for a Jumbotron</p>
+            <p><b>Top Full:</b> A dynamic widget area above the main content and below the Hero Canvas or top navbar. "Dynamic" means: If you publish one widget here it will take 100% of its size. If you publish two widgets both use 50% width and will be rendered side-by-side. With three widgets you have three column and so on...</p>
+            <p><b>Left and Right Sidebar:</b> Widget ares on the left and right of main content. Keep in mind: This widget ares will be shown ONLY if a widget is published there AND if the sidebar is part of your Theme Layout set under "Appereance -> Customizer -> Theme Layout Settings". By default this is set to "Right Sidebar". That means the left sidebar is not rendered even if you publish a widget there.</p>
+            <p><b>FooterFull:</b> A dynamic sidebar like "Top Full", but below the main content.</p>
           </article>
 
           <article id="developing">

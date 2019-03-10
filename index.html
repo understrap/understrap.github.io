@@ -26,7 +26,7 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-139292-28', 'auto');
-                      //anonymize IP
+          //anonymize IP
             ga('set', 'anonymizeIp', true);
                     ga('send', 'pageview');
 
@@ -69,7 +69,11 @@
             <h2>Changelog & Release Infos</h2>
 
             <p>
-            Stable release: <img src="https://img.shields.io/github/release/holger1411/understrap.svg" /> | Dependencies: <a href="https://david-dm.org/holger1411/understrap#info=devDependencies" target="_blank"><img src="https://img.shields.io/david/holger1411/understrap.svg" /></a><br/>
+            <img src="https://img.shields.io/github/package-json/v/understrap/understrap.svg?style=popout-square" />
+            <a href="https://david-dm.org/holger1411/understrap#info=devDependencies" target="_blank"><img src="https://img.shields.io/david/holger1411/understrap.svg?style=popout-square" /></a>
+            <img src="https://img.shields.io/wordpress/theme/dt/understrap.svg?style=popout-square" />
+            <img src="https://img.shields.io/wordpress/theme/installs/understrap.svg?style=popout-square" />
+<hr/>
             <h5>See <a href="https://github.com/holger1411/understrap/blob/master/CHANGELOG.md" target="_blank">Changelog</a></h5>
             </p>
           </article>
@@ -79,7 +83,7 @@
           <article id="installation">
             <h2>Installation</h2>
             <p class="lead">
-              There are two (common) ways to install UnderStrap: Via WordPress theme installer or manually via ZIP upload.
+              There are four ways to install UnderStrap: Via WordPress theme installer, via ZIP upload, via SFTP or with Git & npm.
             </p>
 
               <h4>1. Installation via WordPress theme installer</h4>
@@ -101,14 +105,16 @@
               Follow step 2 but extract the freshly downloaded understrap.zip file on your local HDD. Now connect via SFTP to your server, browse to the <code>/wp-content/themes</code> directory of your WordPress installation and upload the <code>/understrap</code> folder to it.
             </p>
 
-            <h4>4. Install via npm</h4>
+            <h4>4. Install via Git and npm</h4>
             <p >
               Open your terminal and browse to the location where you want to install UnderStrap:
               <pre>cd path/to/location/</pre>
               If needed create the proper folder:
               <pre>mkdir understrap </pre>
-              Now install everything you need with:
-              <pre>npm install understrap</pre>
+              Now pull in UnderStrap via GitHub with::
+              <pre>git clone https://github.com/understrap/understrap.git</pre>
+              At the end install all dependencies by this command:
+              <pre>npm install</pre>
             </p>
 
           </article>
@@ -300,7 +306,7 @@ nav {
             </ul>
 
           </div>
-                  
+
 
           </div>
 

@@ -168,13 +168,13 @@
                 <p>Or, to run with Browser-Sync:</p>
 
                 <ul>
-                <li>First change the browser-sync options to reflect your environment in the file <code>/gulpfile.js</code> in the beginning of the file:</li>
+                <li>First change the browser-sync options to reflect your environment in the file <code>/gulpconfig.json</code> in the beginning of the file:</li>
                 </ul>
 
-                <pre><code class="js">var browserSyncOptions = {
-                    proxy: "localhost/theme_test/", // <----- CHANGE HERE
-                    notify: false
-                };</code></pre>
+                <pre><code class="js">"browserSyncOptions" : {
+                    "proxy": "localhost/theme_test/", // <----- CHANGE HERE
+                    "notify": false
+                },</code></pre>
 
                 <ul>
                 <li> Replace <code>localhost/theme_test/</code> with the URL to your local WordPress test environment.<br/>  For example if you run MAMP and your WordPress installation is placed in a htdocs subfolder called <code>/understrap</code> you have to add <code>localhost:8888/understrap</code>. Its the same URL you have to type in to see your local WordPress installation.</li>

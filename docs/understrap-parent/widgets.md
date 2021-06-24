@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 ---
 
-# Widgets
+# Widgets and Sidebars
 
 The theme comes with five main widget areas: Two sidebar widgets, one full size "hero" widget and two dynamic widgets area above and below the main content.
 

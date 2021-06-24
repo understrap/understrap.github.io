@@ -6,7 +6,7 @@ module.exports = {
   title: 'Understrap Docs',
   tagline: 'Bootstrap + Underscores Framework',
   url: 'https://understrap.github.io',
-  baseUrl: '/understrap/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/understrap-logo-site-icon.png',
@@ -24,7 +24,7 @@ module.exports = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Docs',
+          label: 'Start Here',
         },
         {
           href: 'https://understrap.com/demos',

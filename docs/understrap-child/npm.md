@@ -46,22 +46,7 @@ Or, to run with Browser-Sync:
 For example if you run MAMP and your WordPress installation is placed in a htdocs subfolder called `/understrap` you have to add `localhost:8888/understrap`. Its the same URL you have to type in to see your local WordPress installation.
 - then run: `gulp watch-bs`
 
-### A more detailed example of working with SCSS - Npm - Gulp 
-
-This little how to is for Linux - OS X users how currently know how to clone the project from Github. If not check [this tutorial here](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners). Assumptions: you have cloned project's source and you want to start styling various parts of the theme. Additionally you have Node.js installed on your system, if not [check here how to do it](https://nodejs.org/en/download/package-manager/).
-
-1.  Go to project's root directory
-2.  Install project's toolchain and dependencies by typing `npm install`. When this command completes, you should be able to see a new directory named `node_modules` under project's root directory (`understrap/node_modules`)
-3.  Move various needed libraries from `node_modules` where installed with `npm install` to project's root directory by typing `gulp copy-assets`. When this command complete, you should be able to see a new directory named `src` under project's root directory (`understrap/src`).
-
-We the above prerequisites complete, you are now ready to start developing - styling your copy of Understrap. For this guide, we will do the following:
-
--   create a SCSS variable
--   see how to nest style rules
--   use the variable to change navbar's link colors
--   see how to reference parent selector while nesting rules to handle a hover event
-
-#### Running the watcher
+## Overriding Default Styles and Scripts
 
 First we must run the watcher process which is responsible to track file changes and compile these changes to the final CSS file which in turn WordPress loads. From the terminal and while in project root directory type `gulp watch`. You should see something like the following:
 
@@ -74,32 +59,15 @@ stef@dev:understrap$ gulp watch
 
 leave the terminal open with the command running as is.
 
-#### Styling the theme
+Add your own CSS styles to `/sass/theme/_child_theme.scss` or import you own files into `/sass/theme/understrap-child.scss`
 
-With the watcher running, open the SCSS file `understrap/sass/theme/_theme.scss` and paste the following, (you should also read the code comments):
+To overwrite Bootstrap's or Understrap's base variables just add your own value to:`/sass/theme/_child_theme_variables.scss`
 
-```
-// SCSS Syntax http://sass-lang.com/documentation/file.SASS_REFERENCE.html#css_extensions
+For example, the "$brand-primary" variable is used by both Bootstrap and UnderStrap.
 
-// variable declaration in SCSS we use variables to keep style clean and easy to modify
-// if we use this variable to say 50 rules and want to change the color, we would change only this variable.
-$mycolor: #67A6A6;
+Add your own color like: `$brand-primary: #ff6600;` in `/sass/theme/_child_theme_variables.scss` to overwrite it. This change will automatically apply to all elements that use the $brand-primary variable.
 
-// in SCSS we nest
-nav {
-  // in CSS this was selected by nav a
-  a {
-    color: $mycolor !important;
-    // change a on hover example
-    // in CSS this was selected by nav a:hover
-    &:hover {
-      color: $brand-primary !important;
-    }
-  }
-}
-```
-
-by saving the file you should see in terminal something like the following:
+By saving the file you should see in terminal something like the following:
 
 ```
 [13:15:22] Starting 'sass'...
@@ -110,4 +78,10 @@ by saving the file you should see in terminal something like the following:
 [13:15:23] Finished 'cssnano' after 737 ms
 ```
 
-reload the page and you should be able to see the new style applied.
+Reload the page and you should be able to see the new style applied.
+
+It will be outputted into: `/css/understrap-child.min.css` and `/css/understrap-child.css`
+
+So you have one clean CSS file at the end and just one request.
+
+Add your own JS files to `src/js/` to have them bundled into child-theme.js.

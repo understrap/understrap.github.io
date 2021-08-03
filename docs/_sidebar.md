@@ -9,6 +9,7 @@
   * [Getting Started](understrap-child/getting-started)
   * [NPM and Gulp](understrap-child/npm.md)
   * [Functions.php Overrides](understrap-child/functions.md)
+* [Common Issues](issues.md)
 * [Understrap Premium](premium.md)
 * [License](license.md)
 * [Credits](credits.md)

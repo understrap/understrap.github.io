@@ -12,6 +12,8 @@ If you're not seeing the language flags for Polylang, this has been discussed he
 
 We recommend running `node -v` to check on what version of Node you're running. Node-sass seems requires node be v14 or below.
 
+Running `npm rebuild node-sass` and then `npm install` can also sometimes correct this error.
+
 ---
 
 **Whenever I add a submenu, my parent menu item link shows a hashtag instead of the URL.**

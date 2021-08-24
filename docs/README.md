@@ -1,8 +1,8 @@
 # Introduction
 
-Welcome to Understrap. UnderStrap is a WordPress theme framework. It based on Bootstrap 4 and the starter theme Underscores. All glued together by npm, Gulp and Sass.
+Welcome to Understrap. Understrap is a WordPress theme framework. It's based on Bootstrap 4 and the starter theme Underscores. All glued together by npm and Sass.
 
-You can use it as starter theme itself and build your own design theme on top of it. Or you use it as parent theme framework and create your own child theme for UnderStrap. We recommend the second route in this documentation.
+You can use it as a starter theme itself and build your own design theme on top of it. Or you can use it as a parent theme framework and create your own child theme for Understrap. We recommend the second route in this documentation.
 
 - Latest version: <img src="https://img.shields.io/github/package-json/v/understrap/understrap.svg?style=popout-square" alt="latest version"/><br/>
 - Dependencies: <a href="https://david-dm.org/understrap/understrap#info=devDependencies" target="_blank"><img src="https://img.shields.io/david/understrap/understrap.svg?style=popout-square" alt="dependency check"/></a><br/>

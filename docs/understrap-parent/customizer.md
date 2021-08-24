@@ -14,3 +14,4 @@ Contains settings fields for the container width and sidebar defaults.
 
 - **Container Width** - Choose between Bootstrap's container and container-fluid
 - **Sidebar Positioning** - Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.
+- **Footer Site Info** - Override the default colophon text in the footer of the Understrap theme by using this text field.

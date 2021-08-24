@@ -20,7 +20,7 @@ For users who are just using the parent theme, or are updating things like menus
 
 ## Child Theme Development
 
-If you're planning on developing a custom theme, we recommend using the [Child Starter Theme](https://github.com/understrap/understrap-child). These docs will take you through setup for your local development, as well as some of the common customizations you might need to make.
+If you're planning on developing a custom theme, we recommend visiting the [Child Starter Theme Documentation](understrap-child/).
 
 
 

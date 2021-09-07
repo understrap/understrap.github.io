@@ -1,16 +1,16 @@
 # Installation
 
-There are four ways to install UnderStrap: Via WordPress theme installer, via ZIP upload, via SFTP or with Git & npm.
+There are four ways to install Understrap: Via WordPress theme installer, via ZIP upload, via SFTP or with Git & npm.
 
 ## 1. Installation via WordPress theme installer
 
-UnderStrap is available via [wordpress.org](https://wordpress.org/themes/understrap/). Means you can install it from your WordPress backend as any other theme, too.
+Understrap is available via [wordpress.org](https://wordpress.org/themes/understrap/). Means you can install it from your WordPress backend as any other theme, too.
 
-Click on `Appearance -> Themes` in your WordPress backend, hit the "Add New" button and search for "UnderStrap". Hit the "install" button and wait a moment. UnderStrap will be installed on your server. Now activate UnderStrap. Go again to `Appearance -> Themes` and hit the "Activate" button below the UnderStrap screenshot.
+Click on `Appearance -> Themes` in your WordPress backend, hit the "Add New" button and search for "Understrap". Hit the "install" button and wait a moment. Understrap will be installed on your server. Now activate Understrap. Go again to `Appearance -> Themes` and hit the "Activate" button below the Understrap screenshot.
 
 ## 2. Installation via Upload
 
-UnderStrap is available as .zip archive at [UnderStrap.com](https://understrap.com). Download it and store it on your local HDD.
+Understrap is available as .zip archive at [Understrap.com](https://understrap.com). Download it and store it on your local HDD.
 
 Open your WordPress backend and click on `Appearance -> Themes`, hit the "Add New" button followed by the "Upload Theme" button.
 
@@ -22,7 +22,7 @@ Follow step 2 but extract the freshly downloaded understrap.zip file on your loc
 
 ## 4. Install via Git and npm
 
-Open your terminal and browse to the location where you want to install UnderStrap:
+Open your terminal and browse to the location where you want to install Understrap:
 
 `cd path/to/location/`
 
@@ -30,7 +30,7 @@ If needed create the proper folder:
 
 `mkdir understrap `
 
-Now pull in UnderStrap via GitHub with:
+Now pull in Understrap via GitHub with:
 
 `git clone https://github.com/understrap/understrap.git`
 

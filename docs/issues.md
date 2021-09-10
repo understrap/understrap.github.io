@@ -31,3 +31,13 @@ We'd also recommend adding some styles that will show the dropdown menu automati
 	display: block;
 }
 ```
+
+---
+
+**My console.log() output is not showing up.**
+
+When we compile the javascript, we use rollup to put everything into child-theme.js. Then we use terser to minify that into child-theme.min.js. That second process removes all `console.log()` calls from happening on your live site's javascript. 
+
+However, if you want to see your console output, you can either:
+1. change your functions.php file to load the non-minified version while you're developing (child-theme.js instead of child-theme.min.js) OR
+2. change the setting in /src/build/terser.config.json on line 7 that says `"drop_console":true` to `"drop_console":false` which will keep all the console log stuff in the final minified JS file.

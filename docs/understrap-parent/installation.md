@@ -8,6 +8,8 @@ Understrap is available via [wordpress.org](https://wordpress.org/themes/underst
 
 Click on `Appearance -> Themes` in your WordPress backend, hit the "Add New" button and search for "Understrap". Hit the "install" button and wait a moment. Understrap will be installed on your server. Now activate Understrap. Go again to `Appearance -> Themes` and hit the "Activate" button below the Understrap screenshot.
 
+**Important:** If you're planning to develop/build on the Understrap parent theme, please do not download the theme from the theme repository. Instead, download it from [Github](https://github.com/understrap/understrap/releases) where all of the necessary build files are included.
+
 ## 2. Installation via Upload
 
 Understrap is available as .zip archive at [Understrap.com](https://understrap.com). Download it and store it on your local HDD.

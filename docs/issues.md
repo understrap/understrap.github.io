@@ -44,7 +44,7 @@ However, if you want to see your console output, you can either:
 
 ---
 
-#### FontAwesome needs display:swap
+#### FontAwesome needs font-display:swap
 
-To remove the pagespeed warning about FontAwesome's icon font not using the `display:swap` property, you can add it to the `@font-face` declaration in `src/sass/assets/fontawesome/_path.scss` and then compile the css with `npm run css`. 
+To remove the pagespeed warning about FontAwesome's icon font not using the `font-display:swap` property, you can add it to the `@font-face` declaration in `src/sass/assets/fontawesome/_path.scss` and then compile the css with `npm run css`. 
 

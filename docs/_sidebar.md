@@ -7,6 +7,7 @@
   * [Templates](understrap-parent/templates.md)
 * [Child Starter Theme](understrap-child/)
   * [Getting Started](understrap-child/getting-started)
+  * [Bootstrap 5](understrap-child/bootstrap5.md)
   * [NPM and the Build Process](understrap-child/npm.md)
   * [Functions.php Overrides](understrap-child/functions.md)
 * [Common Issues](issues.md)

@@ -5,7 +5,6 @@ Welcome to Understrap. Understrap is a WordPress theme framework. It's based on 
 You can use it as a starter theme itself and build your own design theme on top of it. Or you can use it as a parent theme framework and create your own child theme for Understrap. We recommend the second route in this documentation.
 
 - Latest version: <img src="https://img.shields.io/github/package-json/v/understrap/understrap.svg?style=popout-square" alt="latest version"/><br/>
-- Dependencies: <a href="https://david-dm.org/understrap/understrap#info=devDependencies" target="_blank"><img src="https://img.shields.io/david/understrap/understrap.svg?style=popout-square" alt="dependency check"/></a><br/>
 - WordPress.org downloads:<img src="https://img.shields.io/wordpress/theme/dt/understrap.svg?style=popout-square" alt="wordpress.org downloads"/><br/>
 - Active installs (without child themes): <img src="https://img.shields.io/wordpress/theme/installs/understrap.svg?style=popout-square" alt="wordpress isntalls"/><br/>
 - npmjs.com downloads: <img src="https://img.shields.io/npm/dt/understrap.svg?style=popout-square" alt="npm downloads"/><br/>

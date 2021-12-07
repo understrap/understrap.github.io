@@ -12,3 +12,18 @@ Instead of overriding a single function, you can copy an entire file from the pa
 
 **Warning**
 If you override an entire file, be sure to include all of the functions that were in the original file, just to ensure there are no PHP errors due to missing functions. However, this will mean that your theme will miss out any *future* changes to this file, including new functionality that may be required for other template pieces in the parent theme.
+
+## Overriding the parent theme customizer settings
+
+You may want to 'hard-code' the theme settings when building a child theme. As of version 1.1, we include an example override in the `functions.php` file that forces our site to load Bootstrap 5 assets and templates only.
+
+```php
+function understrap_default_bootstrap_version( $current_mod ) {
+	return 'bootstrap5';
+}
+add_filter( 'theme_mod_understrap_bootstrap_version', 'understrap_default_bootstrap_version', 20 );
+```
+
+In addition, we include a small alert at the top of the Theme Layout Settings panel to let the user know that some settings may not be functional:
+
+> You are currently using an Understrap child theme, which may override some of these settings.

@@ -81,3 +81,34 @@ It will be outputted into: `/css/child-theme.min.css` and `/css/child-theme.c
 So you have one clean CSS file at the end and just one request.
 
 Add your own JS to `/src/js/custom-javascript.js` to have them bundled into `/js/child-theme.js`.
+
+## Dist Commands
+
+The child theme includes three commands for creating a distributable copy of your child theme. 
+
+### dist
+
+```bash
+npm run dist
+```
+
+This command will run both the `css` and the `js` commands to create the final compiled and minified versions of your scripts and stylesheets. It will give the same final result as running those commands separately, or running `watch` and saving a file. 
+
+### dist-build
+
+```bash
+npm run dist-build
+```
+
+This command creates a `/dist/` directory inside your child theme and populates it with a distributable version of your child theme. This version does not include any development files or features, such as the `package.json` and the entire `/src/` folder, meaning that another user wouldn't be able to modify and rebuild the stylesheets or javascript files.
+
+By default, the `/dist/` is included in the .gitignore file and is not version controlled. 
+
+### dist-clean
+
+
+```bash
+npm run dist-clean
+```
+
+This command deletes the newly-created `/dist` directory.

@@ -17,15 +17,23 @@ We also recommend using [NVM - Node Version Manager](https://github.com/nvm-sh/n
 
 ## Running
 
+### Watching files
+
 To work and compile your Sass files on the fly start:
 
 ```bash
 npm run watch
 ```
 
-Or, to run with Browser-Sync:
+Note - on the latest version of Understrap, the watch command only builds assets for bootstrap 5. If you're using bootstrap 4 you can either run `npm run css-bs4` after making your changes, or you can modify the `watch-run-css` command on line 24 of your package.json to look something like this:
 
-First change the browser-sync options to reflect your environment in the file `/src/build/browser-sync.config.js` in the beginning of the file:
+```json
+"watch-run-css": "nodemon --watch src/sass/ --ext scss --exec \"npm-run-all css-bs4\"",
+```
+
+### Browser-Sync
+
+To run with Browser-Sync, first change the browser-sync options to reflect your environment in the file `/src/build/browser-sync.config.js` in the beginning of the file:
 
 ```javascript
 module.exports = {

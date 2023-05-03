@@ -10,7 +10,7 @@ The Understrap framework follows the standard WordPress conventions for locating
 - `/inc` - Important theme-specific functionality is included here. Think of this as your expanded `functions.php` file. 
 - `/js` - The final javascript files. These are generated via gulp and should never be modified directly.
 - `/languages` - Translation files.
-- `/loop-templates` - Template files for the content area of pecific post types, like posts and pages.
+- `/loop-templates` - Template files for the content area of specific post types, like posts and pages.
 - `/page-templates` - Custom landing page templates that override the sidebars, headers, etc.
 - `/sidebar-templates` - Template files for sidebars and widget areas.
 - `/src/build` - Configuration files for our sass and js build process.
@@ -39,7 +39,7 @@ The Understrap framework follows the standard WordPress conventions for locating
 
 ## The /src/sass/ Directory
 
-- `/src/sass/assets/` - These files are designed to specicially load third party libraries like FontAwesome and Bootstrap.
+- `/src/sass/assets/` - These files are designed to specifically load third party libraries like FontAwesome and Bootstrap.
 - `/src/sass/theme/` - Theme-specific css files. Use this folder to override Bootstrap variables or add your own designs.
 - `/src/sass/theme.scss` - This file calls in all scss files to generate one front-end stylesheet from all of the various assets.
 - `/src/sass/custom-editor-style.scss` - This file is available to load styles into the backend editor and block editor areas.

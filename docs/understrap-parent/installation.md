@@ -24,19 +24,18 @@ Follow step 2 but extract the freshly downloaded understrap.zip file on your loc
 
 ## 4. Install via Git and npm
 
-Open your terminal and browse to the location where you want to install Understrap:
+Open your terminal and browse to the location where you want to install Understrap (usually in your /wp-content/themes) directory:
 
 `cd path/to/location/`
 
 If needed create the proper folder:
 
-`mkdir understrap `
+`mkdir understrap`
 
 Now pull in Understrap via GitHub with:
 
 `git clone https://github.com/understrap/understrap.git`
 
-At the end install all dependencies by this command:
+Install all dependencies by running this command in the Understrap folder `cd understrap`:
 
 `npm install`
-

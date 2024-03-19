@@ -16,3 +16,21 @@ IMPORTANT: If you download Understrap from GitHub make sure you rename the "unde
 1. Go into your WP admin backend
 1. Go to "Appearance -> Themes"
 1. Activate the Understrap Child theme
+
+## Install via Git and npm
+
+Open your terminal and browse to the location where you want to install Understrap child theme. Same directory you installed Understrap (usually in your /wp-content/themes):
+
+`cd path/to/location/`
+
+If needed create the proper folder:
+
+`mkdir understrap-child`
+
+Now pull in the Understrap child theme via GitHub with:
+
+`git clone https://github.com/understrap/understrap-child.git`
+
+Install all dependencies by running this command in the Understrap folder `cd understrap-child`:
+
+`npm install`

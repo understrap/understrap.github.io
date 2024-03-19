@@ -48,3 +48,27 @@ However, if you want to see your console output, you can either:
 
 To remove the pagespeed warning about FontAwesome's icon font not using the `font-display:swap` property, you can add it to the `@font-face` declaration in `src/sass/assets/fontawesome/_path.scss` and then compile the css with `npm run css`. 
 
+---
+
+#### 'bootstrap' variable or component constructors not working.
+
+I you want to use a Bootstrap constructor OUTSIDE of our build process, like in a separate script or in the site footer or something, it'd have to look like this:
+
+```
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new understrap.Popover(popoverTriggerEl)
+})
+```
+
+If you're using it inside the custom-javascript.js file and rebuilding the scripts, you don't use the name at all, you actually have to import the class into the custom-javascript file:
+
+```
+import Popover from 'bootstrap/js/dist/popover'
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new Popover(popoverTriggerEl)
+})
+```
+
